@@ -1,0 +1,37 @@
+.sounds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+
+.sounds .button {
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.sounds .button div {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: monospace;
+  overflow: hidden;
+  --variation: 10%;
+  background-color: inherit;
+  filter: brightness(calc(100% + var(--variation)));
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 0.2s;
+  color: white;
+}
+
+.sounds .button div:hover {
+  filter: brightness(calc(100% + var(--variation) + 20%));
+}
